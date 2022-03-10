@@ -25,17 +25,16 @@ const selectMenu = [
     },
     {
         title:'Soups',
-        type:'soup',
+        type:'soups',
         image:'https://www.seekpng.com/png/full/89-891255_fast-food-png-food.png'
     },
     {
         title:'Drinks',
-        type:'drink',
+        type:'drinks',
         image:'https://www.seekpng.com/png/full/89-891255_fast-food-png-food.png'
     },
-]
-
-export default function SelectCard() {
+  ]
+export default function SelectCard({state,setState}) {
     return (
       <>
         <p className="text-2xl font-semibold text-center pt-8"> Options</p>
@@ -63,7 +62,9 @@ export default function SelectCard() {
             {
                 selectMenu.map((menu,index)=>(
                 <SwiperSlide key={index}>
-                    <div className="flex flex-col lg:flex-row flex-wrap gap-x-8 gap-y-20 justify-center items-center pt-8 mb-4">
+                    <div className="flex flex-col lg:flex-row flex-wrap gap-x-8 gap-y-20 justify-center items-center pt-8 mb-4"
+                    onClick={()=>{setState(menu.type)}}
+                    >
 
                     <div className="basis-1/2 rounded-2xl flex flex-col xl:flex-row items-center justify-center shadow-lg
                         border border-solid border-green-500 border-2 transition ease-in-out hover:-translate-y-1 hover:scale-110

@@ -71,11 +71,18 @@ import CheckButton from "../Buttons/checkButton";
 //     },   
 // ]
 
-export default function Card({foodList}) {
+export default function Card({foodList,state,setState}) {
     const navigate=useNavigate();
+    const [pre, setPre] = useState(true);
 
+    let foodCate = foodList.filter(e => e.cate === state);
+    if(state==='all')
+        foodCate = foodList;
+    if(state==='popular'){
+        foodCate = foodList.filter(e => e.isPopular === true);
+    }
     // const[state,setState] = useState(false);
-
+    
     return (
       <>
         <div className="flex flex-row flex-wrap space-x-4 justify-between pt-14 items-center "> 
@@ -87,7 +94,7 @@ export default function Card({foodList}) {
             <a className="cursor-pointer mr-44 whitespace-nowrap w-36 inline-flex items-center justify-center px-2 py-1
                         border border-transparent rounded-3xl shadow-sm text-base font-medium text-white bg-green-500 hover:bg-green-600
                         transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110"
-                        onClick={()=>{navigate('/Menu')}} href="#">
+                        onClick={()=>{ navigate('/Menu'); setState('all'); setPre(!pre);}} href="#">
             View all
                 
                 
@@ -100,10 +107,10 @@ export default function Card({foodList}) {
         <div className="pt-20 flex flex-col lg:flex-row flex-wrap gap-x-8 gap-y-20 justify-center items-center">
 
             {
-                foodList.map((food)=>(
+                foodCate.map((food)=>(
 
                     <div key ={food.id} class="basis-1/5 rounded-lg flex flex-col xl:flex-row items-center justify-center bg-gray-100 
-                                md:max-w-xl transition ease-in-out hover:-translate-y-1 hover:scale-110 shadow-lg hover:bg-gray-200"
+                                md:max-w-xl md:max-h-xl transition ease-in-out hover:-translate-y-1 hover:scale-110 shadow-lg hover:bg-gray-200"
                         onClick={()=>{
                             // food.isCheck = !food.isCheck;
                             // setState(!state)
@@ -128,7 +135,7 @@ export default function Card({foodList}) {
                         </div>
                         
                         <div className="flex justify-between items-center">
-                            <span className='text-3xl font-bold text-gray-900 '>{food.price}</span>
+                            <span className='text-3xl font-bold text-gray-900'>${food.price}</span>
                             {food.isCheck && <AddButton></AddButton> ?<CheckButton></CheckButton>:<AddButton></AddButton>}
                             
                         </div>

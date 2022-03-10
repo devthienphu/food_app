@@ -1,14 +1,21 @@
 import {useParams} from 'react-router-dom';
-import { useState } from "react";
-import Footer from '../../Footer';
-import Header from '../../Header';
+import { useState} from "react";
+import { ReactNotifications } from 'react-notifications-component'
+import 'react-notifications-component/dist/theme.css'
+import { Store } from 'react-notifications-component';
+import 'animate.css/animate.min.css';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay} from 'swiper';
 
 import 'swiper/css';
 import 'swiper/css/autoplay';
+import Notification from '../../Notification/notification';
+import Footer from '../../Footer';
+import Header from '../../Header';
 
+
+// fake api data
 const rates = [
     { 
       name:'- Tuna.',
@@ -52,21 +59,51 @@ const rates = [
       comment: 'Very delicious, best service. Perfect!',
       image:'https://gamek.mediacdn.vn/133514250583805952/2021/12/20/17939299-1631633830956-5a524af748005-1640018821731416772953.jpg'
     }
-  ]
+]
 
+let isLogin = true;
 
-export default function Product({foodList}) {
+export default function Product({onAdd,foodList}) {
+
+    // notify when add 
     const {id} = useParams();
     const foodId = id;
-    
+    let notify ='warning';
+    let titleNotify='Add failure';
+    let messageNotify='Please login to add to cart'
+
+    if(isLogin){
+      notify='success';
+      titleNotify='Add to your Cart successfully';
+      messageNotify='"Check your cart!';
+    }
+
+    const handleNotify=()=>{
+      Store.addNotification({
+        title: titleNotify,
+        message: messageNotify,
+        type: notify,
+        insert: "top",
+        container: "top-right",
+        animationIn: ["animate__animated", "animate__fadeIn"],
+        animationOut: ["animate__animated", "animate__fadeOut"],
+        dismiss: {
+          duration: 2200,
+          onScreen: true
+        }
+      })
+    } 
+
+    // find item in data
     let result = foodList.find( ({ id }) => id === parseInt(foodId) );
-
+    // update status
     const[state,setState] = useState(false);
-    return (
 
-      
+
+    return (
       <>
        <div>
+          <ReactNotifications/>
            <Header/>
 
             <div className="flex flex-col lg:flex-row flex-wrap gap-x-8 gap-y-20 justify-center items-center pt-28">
@@ -85,14 +122,17 @@ export default function Product({foodList}) {
                     
                     <p className="text-gray-600">{result.detail}</p>
 
-                    <p className="text-4xl font-bold py-4">{result.price}</p>
+                    <p className="text-4xl font-bold py-4">${result.price}</p>
 
                     <button className="whitespace-nowrap w-36 h-12 inline-flex items-center justify-center px-2 py-1
                         border border-transparent rounded-3xl shadow-sm text-base font-medium text-white bg-green-500 hover:bg-green-600
                         transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110"
                         onClick={()=>{ 
                             result.isCheck = !result.isCheck;
-                            setState(!state)}}
+                            setState(!state);
+                            handleNotify();
+                            onAdd(result);
+                            }}
                         >Order now</button>
                 </div>
 
@@ -183,4 +223,5 @@ export default function Product({foodList}) {
       </>
     )
 }
+
   
