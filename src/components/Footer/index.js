@@ -71,7 +71,7 @@ export default function Footer() {
 			</div>
 		</div>
 	</div>
-	<div className="py-6 text-sm text-center dark:text-coolGray-400">© 2021 Company Co. All rights reserved.</div>
+	<div className="py-6 text-sm text-center dark:text-coolGray-400">© 2022 Company Co. All rights reserved.</div>
 </footer>
     );
 }

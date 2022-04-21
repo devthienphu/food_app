@@ -10,27 +10,27 @@ import 'swiper/css/navigation';
 const selectMenu = [
     {
         title:'Fast food',
-        type:'fastfood',
+        type:'Fast food',
         image:'https://www.seekpng.com/png/full/89-891255_fast-food-png-food.png'
     },
     {
         title:'Sushi',
-        type:'sushi',
+        type:'Sushi',
         image:'https://pngimg.com/uploads/sushi/sushi_PNG9202.png'
     },
     {
         title:'Dessert',
-        type:'dessert',
+        type:'Dessert',
         image:'https://www.nicepng.com/png/full/95-951391_caramel-pudding-cream-caramel-pudding-png.png'
     },
     {
         title:'Soups',
-        type:'soups',
+        type:'Soups',
         image:'https://salt.tikicdn.com/cache/w1200/ts/product/e4/3b/54/8c56ac7bfc2f45bba05efcde966d9250.png'
     },
     {
         title:'Drinks',
-        type:'drinks',
+        type:'Drinks',
         image:'https://shopnguyenlieu.com/wp-content/uploads/2019/09/tradaothachdao-550x467.png'
     },
   ]
