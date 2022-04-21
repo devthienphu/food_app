@@ -1,29 +1,31 @@
+import { useNavigate } from 'react-router-dom'
 
 
 const categories =[
     {   
         id:1,
         name:'Sushi',
-        description:'burgers, hamburgers ,hot dogs, fries, nuggest',
+        description:'Combo sushi 4 thuyền dành cho 2 người',
         image:'https://pngimg.com/uploads/sushi/sushi_PNG9202.png'
     },
     {
         id:2,
         name:'Fast Food',
-        description:'burgers, hamburgers ,hot dogs, fries, nuggest',
+        description:'Các món thức ăn nhanh ưa thích của mọi nhà',
         image:'https://www.seekpng.com/png/full/89-891255_fast-food-png-food.png'
     },
     {
         id:3,
-        name:'Fruit',
-        description:'burgers, hamburgers ,hot dogs, fries, nuggest',
-        image:'https://pngimg.com/uploads/sushi/sushi_PNG9202.png'
+        name:'Drink',
+        description:'Các loại thức uống thơm ngon, mát lành',
+        image:'https://shopnguyenlieu.com/wp-content/uploads/2019/09/tradaothachdao-550x467.png'
     },
 
 
 ];
 
 export default function Category() {
+    const navigate=useNavigate();
     return (
 
         <div className="flex flex-col lg:flex-row flex-wrap gap-x-8 gap-y-8 justify-center items-center">
@@ -33,7 +35,8 @@ export default function Category() {
                     categories.map((category)=>(
                 <>
                     <div key ={category.id} className="basis-1/4 flex flex-col items-center bg-white rounded-2xl border shadow-md 
-                                xl:flex-row md:max-w-xl hover:bg-gray-100 transition ease-in-out hover:-translate-y-1 hover:scale-110">
+                                xl:flex-row md:max-w-xl hover:bg-gray-100 transition ease-in-out hover:-translate-y-1 hover:scale-110 cursor-pointer"
+                                onClick={()=>{navigate('/Menu');}}>
                                 
                         <img className="object-cover w-32 rounded-t-lg md:h-auto md:ml-4 md:w-32 md:rounded-none md:rounded-lg" src={category.image} alt=""/>
                         <div className="flex flex-col justify-between p-4 leading-normal">
@@ -58,11 +61,6 @@ export default function Category() {
                     ))
                 }
  
-            {/* </div> */}
-
-            {/* <div div className="basis-1/4 h-14 rounded-lg flex items-center justify-center bg-fuchsia-500 shadow-lg">02</div>
-            
-            <div className="basis-1/4 h-14 rounded-lg flex items-center justify-center bg-fuchsia-500 shadow-lg">03</div> */}
         </div>
 
         

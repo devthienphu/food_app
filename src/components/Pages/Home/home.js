@@ -1,26 +1,22 @@
-import Slider from "./Slider/slider";
-import Category from "./ExampleCard/examCard";
-import Card from "./Cards/card";
-import Footer from "../Footer";
-import Header from "../Header";
-import dish from "../../images/dishfood.png";
-import chef from "../../images/chef.png";
-import foodList from '../../data/data';
+import Slider from "../../Contents/Slider/slider";
+import Category from "../../Contents/ExampleCard/examCard";
+import Card from "../../Contents//Cards/card";
+import Footer from "../../Footer/";
+import Header from "../../Header";
+import dish from "../../../images/dishfood.png";
+import chef from "../../../images/chef.png";
+import foodList from '../../../data/data';
 import {useState} from 'react'
 
 
 
-export default function Content() {
+export default function Home() {
      const [state, setstate] = useState('popular');
     return (
       <>
 
     <Header/>
     
-    <div className="w-64 h-64 z-10 bg-green-500 right-0 fixed clip hidden lg:flex">
-        
-    </div>
-
      <Slider></Slider>
      <Category></Category>
      <Card foodList={foodList} state={state} ></Card>

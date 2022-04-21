@@ -106,7 +106,7 @@ export default function Product({onAdd,foodList}) {
           <ReactNotifications/>
            <Header/>
 
-            <div className="flex flex-col lg:flex-row flex-wrap gap-x-8 gap-y-20 justify-center items-center pt-28">
+            <div className="flex flex-col lg:flex-row flex-wrap gap-x-8 gap-y-20 justify-center items-center pt-32 md:pt-48">
 
                 <div className="basis-1/3 rounded-lg flex flex-col items-left justify-center p-2">
                     <p className="text-5xl font-semibold block ">{result.name}</p>
@@ -120,7 +120,7 @@ export default function Product({onAdd,foodList}) {
                             <span className="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ml-3">5.0</span>
                     </div>
                     
-                    <p className="text-gray-600">{result.detail}</p>
+                    <p className="text-gray-600">{result.dishDescription}</p>
 
                     <p className="text-4xl font-bold py-4">${result.price}</p>
 
@@ -137,7 +137,7 @@ export default function Product({onAdd,foodList}) {
                 </div>
 
                 <div className=" basis-1/3 items-left justify-center">
-                    <img className="ml-8" src={result.image} alt="" ></img>
+                    <img className="ml-8 w-80 lg:w-full" src={result.image} alt="" ></img>
                 </div>
 
             </div>

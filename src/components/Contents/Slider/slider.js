@@ -56,7 +56,7 @@ export default function Slider() {
         sliderList.map((slider)=>(
           <SwiperSlide key ={slider.id}>   
           <>
-          <div className="flex flex-col md:flex-row">
+          <div className="flex flex-col md:flex-row pt-16">
             <div  className="basis-3/4 rounded-lg flex items-center justify-center lg:ml-32">
                 <div className="flex flex-col p-8 lg:p-32">
                   <h3 className="text-gray-600 p-2">{slider.content}</h3>
@@ -81,26 +81,3 @@ export default function Slider() {
     </Swiper>
   );
 };
-
-// export default function Banner() {
-//     return (
-//       <div className="flex flex-row">
-//         <div className="basis-3/4 rounded-lg flex items-center justify-center ml-32">
-//           <div className="flex flex-col p-32">
-//             <h3 className="text-gray-600 p-2">THE BEST CUISINE AWAITS YOUS</h3>
-//             <h2 className="font-medium text-5xl p-2">Welcome!</h2>
-//             <h2 className="font-bold text-5xl p-2">To my food</h2>
-//             <h3 className="font-bold text-3xl text-green-600 p-4">20% | DISCOUNT UPON</h3>
-//             <button className="mt-2 ml-2 whitespace-nowrap w-32 inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-3xl shadow-sm text-base font-medium text-white bg-green-500 hover:bg-green-600">Register</button>
-//           </div>
-//         </div>
- 
-//         <div className="basis-11/12 rounded-lg flex items-center justify-center ">
-//           <img src="https://shibares.herokuapp.com/images/home-img-2.png"  className="w-auto mr-48 mt-8"></img>
-//         </div>
-
-        
-//       </div>
-//     );
-//   }
-  
