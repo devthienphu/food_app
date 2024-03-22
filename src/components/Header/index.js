@@ -70,10 +70,10 @@ export default function Header() {
             <div className="cursor-pointer flex items-center">
               <img
                 className="h-8 ml-3 w-auto sm:h-10"
-                src="https://static.wixstatic.com/media/2cd43b_17040a042929442094fd1a2179d5bd29~mv2.png/v1/fill/w_320,h_320,q_90/2cd43b_17040a042929442094fd1a2179d5bd29~mv2.png"
-                alt=""
+                src="https://www.softwareone.com/-/media/images/logos/softwareone-logo-blk.svg?iar=0&hash=6A277FF39328B4D79A071F4A9F95F301"
+                alt="logo"
               />
-              <span className="font-bold text-2xl px-2 text-blue-600">Luna Eatery</span>
+              <span className="font-bold text-2xl px-2 text-blue-600">Shop</span>
             </div>
           </div>
           <div className="-mr-2 -my-2 md:hidden">

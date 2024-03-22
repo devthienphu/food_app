@@ -12,33 +12,33 @@ import 'swiper/css/pagination';
 const sliderList = [
   {
   id:1,
-  content :'THE BEST CUISINE AWAITS YOUS',
-  secondaryContent :'Beefsteak',
-  thirContent :'Delicious!',
+  content :'NEW T-SHIRT',
+  secondaryContent :'Áo thể thao Essentials',
+  thirContent :'100% Polyester',
   discount :'20% | DISCOUNT UPON',
   buttonContent:'Register',
-  image:beepsteak
+  image:"https://static.vecteezy.com/system/resources/previews/008/847/318/non_2x/isolated-black-t-shirt-front-free-png.png"
   },
 
   {
   id:2,
-  content :'THE BEST CUISINE AWAITS YOUS',
-  secondaryContent :'Best food',
-  thirContent :'Healthy food',
+  content :'TNEW SHIRT',
+  secondaryContent :'Áo Sơ mi dài tay',
+  thirContent :'Café-DriS',
   discount :'20% | DISCOUNT UPON',
   buttonContent:'Register',
-  image:salad
+  image:"https://freepngimg.com/save/12846-dress-shirt-png-hd/480x480"
   },
 
-  {
-    id:3,
-    content :'THE BEST CUISINE AWAITS YOUS',
-    secondaryContent :'Welcome!',
-    thirContent :'To my food',
-    discount :'20% | DISCOUNT UPON',
-    buttonContent:'Register',
-    image:salad2
-  },
+  // {
+  //   id:3,
+  //   content :'THE BEST CUISINE AWAITS YOUS',
+  //   secondaryContent :'Welcome!',
+  //   thirContent :'To my food',
+  //   discount :'20% | DISCOUNT UPON',
+  //   buttonContent:'Register',
+  //   image:salad2
+  // },
     
 ]
 
@@ -64,9 +64,9 @@ export default function Slider() {
                   <h3 className="text-gray-600 p-2">{slider.content}</h3>
                   <h2 className="font-medium text-5xl p-2">{slider.secondaryContent}</h2>
                   <h2 className="font-bold text-5xl p-2">{slider.thirContent}</h2>
-                  <h3 className="font-bold text-3xl text-green-600 p-4">{slider.discount}</h3>
+                  <h3 className="font-bold text-3xl text-blue-600 p-4">{slider.discount}</h3>
                   <button className="mt-2 ml-2 whitespace-nowrap w-32 inline-flex items-center justify-center 
-                  px-4 py-2 border border-transparent rounded-3xl shadow-sm text-base font-medium text-white bg-green-500 hover:bg-green-600">
+                  px-4 py-2 border border-transparent rounded-3xl shadow-sm text-base font-medium text-white bg-blue-500 hover:bg-blue-600">
                       {slider.buttonContent}</button>
                 </div>
             </div>

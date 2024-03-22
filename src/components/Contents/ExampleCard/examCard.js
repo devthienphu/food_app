@@ -4,21 +4,21 @@ import { useNavigate } from 'react-router-dom'
 const categories =[
     {   
         id:1,
-        name:'Sushi',
-        description:'Combo sushi 4 thuyền dành cho 2 người',
-        image:'https://pngimg.com/uploads/sushi/sushi_PNG9202.png'
+        name:'Áo thun',
+        description:'Giảm 10% cho đơn hàng từ 349k',
+        image:'https://static.vecteezy.com/system/resources/previews/008/847/318/non_2x/isolated-black-t-shirt-front-free-png.png'
     },
     {
         id:2,
-        name:'Fast Food',
-        description:'Các món thức ăn nhanh ưa thích của mọi nhà',
-        image:'https://www.seekpng.com/png/full/89-891255_fast-food-png-food.png'
+        name:'Áo sơ mi',
+        description:'Tặng áo thun 100% cotton',
+        image:'https://freepngimg.com/save/12846-dress-shirt-png-hd/480x480'
     },
     {
         id:3,
-        name:'Drink',
-        description:'Các loại thức uống thơm ngon, mát lành',
-        image:'https://shopnguyenlieu.com/wp-content/uploads/2019/09/tradaothachdao-550x467.png'
+        name:'Nón',
+        description:'Mua 1 tặng 1',
+        image:'https://static.vecteezy.com/system/resources/thumbnails/011/356/628/small/black-baseball-cap-png.png'
     },
 
 
@@ -44,7 +44,7 @@ export default function Category() {
                             <p className="mb-3 text-sm font-normal text-gray-700 ">{category.description}</p>
 
                             <button className="hidden xl:flex float-right mt-2 2xl:ml-32 xl:ml-20 whitespace-nowrap w-16 inline-flex items-center justify-center px-2 py-1
-                                                border border-transparent rounded-3xl shadow-sm text-base font-medium text-white bg-green-500 hover:bg-green-600">
+                                                border border-transparent rounded-3xl shadow-sm text-base font-medium text-white bg-blue-500 hover:bg-blue-600">
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                                     <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenevenodd" />
                                 </svg>
