@@ -8,31 +8,24 @@ import 'swiper/css/autoplay';
 import 'swiper/css/navigation';
 
 const selectMenu = [
-    {
-        title:'Fast food',
-        type:'Fast food',
-        image:'https://www.seekpng.com/png/full/89-891255_fast-food-png-food.png'
-    },
-    {
-        title:'Sushi',
-        type:'Sushi',
-        image:'https://pngimg.com/uploads/sushi/sushi_PNG9202.png'
-    },
-    {
-        title:'Dessert',
-        type:'Dessert',
-        image:'https://www.nicepng.com/png/full/95-951391_caramel-pudding-cream-caramel-pudding-png.png'
-    },
-    {
-        title:'Soups',
-        type:'Soups',
-        image:'https://salt.tikicdn.com/cache/w1200/ts/product/e4/3b/54/8c56ac7bfc2f45bba05efcde966d9250.png'
-    },
-    {
-        title:'Drinks',
-        type:'Drinks',
-        image:'https://shopnguyenlieu.com/wp-content/uploads/2019/09/tradaothachdao-550x467.png'
-    },
+  {
+    title: 'Áo thun',
+    cateID: 1,
+    image: 'https://static.vecteezy.com/system/resources/previews/008/847/318/non_2x/isolated-black-t-shirt-front-free-png.png'
+  },
+  {
+    title: 'Áo sơ mi',
+    cateID: 2,
+    image: 'https://freepngimg.com/save/12846-dress-shirt-png-hd/480x480'
+  }, {
+    title: 'Nón',
+    cateID: 3,
+    image: 'https://static.vecteezy.com/system/resources/thumbnails/011/356/628/small/black-baseball-cap-png.png'
+  }, {
+    title: 'Quần',
+    cateID: 4,
+    image: 'https://product.hstatic.net/200000775589/product/qsk101_001_f881ad28db3749e1af71c2f2b0dcbf05_master.png'
+  }
   ]
 export default function SelectCard({state,setState}) {
     return (
@@ -63,7 +56,7 @@ export default function SelectCard({state,setState}) {
                 selectMenu.map((menu,index)=>(
                 <SwiperSlide key={index}>
                     <div className="flex flex-col lg:flex-row flex-wrap gap-x-8 gap-y-20 justify-center items-center pt-8 mb-4"
-                    onClick={()=>{setState(menu.type)}}
+                    onClick={()=>{setState(menu.title)}}
                     >
                     <div className="basis-1/2 rounded-2xl flex flex-col xl:flex-row items-center justify-center shadow-lg
                         border border-solid border-green-500 border-2 transition ease-in-out hover:-translate-y-1 hover:scale-110

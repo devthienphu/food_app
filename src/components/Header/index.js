@@ -36,18 +36,18 @@ const solutions = [
     icon: CursorClickIcon,
   },
   { name: 'About', description: "Your customers' data will be safe and secure.", href: '/About', icon: InformationCircleIcon },
-  {
-    name: 'Contact',
-    description: "Connect with third-party tools that you're already using.",
-    href: '/Contact',
-    icon: ViewGridIcon,
-  },
-  {
-    name: 'Cart',
-    description: "Connect with third-party tools that you're already using.",
-    href: '/Cart',
-    icon: BookmarkAltIcon,
-  },
+  // {
+  //   name: 'Contact',
+  //   description: "Connect with third-party tools that you're already using.",
+  //   href: '/Contact',
+  //   icon: ViewGridIcon,
+  // },
+  // {
+  //   name: 'Cart',
+  //   description: "Connect with third-party tools that you're already using.",
+  //   href: '/Cart',
+  //   icon: BookmarkAltIcon,
+  // },
 ]
 
 
@@ -112,7 +112,7 @@ export default function Header() {
             <a
               href="#"
               className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-3xl shadow-sm text-base font-medium text-white bg-green-600 hover:bg-green-700"
-              onClick={()=>{navigate('/Login')}}
+              onClick={()=>{navigate('/')}}
             >
              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />

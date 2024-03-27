@@ -55,22 +55,22 @@ function App() {
     <Routes>
 
       <Route path="/Menu" element={<Menu/>}/>
-      <Route path="/About" element={<About/>}/>
-      <Route path="/Contact" element={<Contact/>}/>
-      <Route path="/Login" element={<Login/>}/>
-      <Route path="/Cart" element={<Cart onRemove={onRemove} />}/>
+      {/* <Route path="/About" element={<About/>}/> */}
+      {/* <Route path="/Contact" element={<Contact/>}/> */}
+      {/* <Route path="/Login" element={<Login/>}/> */}
+      {/* <Route path="/Cart" element={<Cart onRemove={onRemove} />}/> */}
       <Route path="/Product/:id" element={<Product onAdd={onAdd} foodList= {foodList}/>}/>
-      <Route path="/SignUp" element={<Signup/>}/>
-      <Route path="/info" element={<Info/>}/>
+      {/* <Route path="/SignUp" element={<Signup/>}/> */}
+      {/* <Route path="/info" element={<Info/>}/> */}
 
 
       {/*Admin route */}
-      <Route path="/Login/admin" element={<AdminLogin/>}/>
+      {/* <Route path="/Login/admin" element={<AdminLogin/>}/>
       <Route path="/admin" element={<AdminPage/>}/>
       <Route path="/admin/cate" element={<CateAdmin/>}/>
       <Route path="/admin/cate/:cateID" element={<UpdateCategory/>}/>
       <Route path="/admin/cate/add" element={<AddCategory/>}/>
-      <Route path="/admin/product" element={<AdProduct/>}/>
+      <Route path="/admin/product" element={<AdProduct/>}/> */}
 
 
 
